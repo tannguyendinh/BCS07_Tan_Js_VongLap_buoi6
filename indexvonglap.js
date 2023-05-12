@@ -83,8 +83,7 @@ function theDip() {
 
 function kiemTraSoNguyenTo(Number) {
   if (Number < 2) {
-    // alert ("nhập số lớn hơn 2");
-    return;
+    return 0;
   } else {
     var soNguyenTo = 1;
     for (var i = 2; i < Math.sqrt(Number); i++) {
@@ -103,6 +102,9 @@ function timSoNguyenToNDNhap() {
   var arr = [];
   var nhapSoNguyenTo = document.getElementById("nhapSoNguyenTo").value * 1;
 
+  if (nhapSoNguyenTo <= 2){
+    alert ("nhập số lớn hơn 2");
+  }
   for (var i = 1; i < nhapSoNguyenTo; i++) {
     if (kiemTraSoNguyenTo(i) == 1) {
       arr.push(i);
